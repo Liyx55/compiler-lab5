@@ -1877,6 +1877,8 @@ State 110
    68 declare_id_list: declare_id_list . COMMA declare_id_list
    68                | declare_id_list COMMA declare_id_list .
 
+    COMMA  shift, and go to state 98
+
     $default  reduce using rule 68 (declare_id_list)
 
 
@@ -2517,6 +2519,8 @@ State 139
    22 params: params . COMMA params
    22       | params COMMA params .
 
+    COMMA  shift, and go to state 125
+
     $default  reduce using rule 22 (params)
 
 
@@ -2670,6 +2674,8 @@ State 148
    70 printf_id_list: printf_id_list . COMMA printf_id_list
    70               | printf_id_list COMMA printf_id_list .
 
+    COMMA  shift, and go to state 133
+
     $default  reduce using rule 70 (printf_id_list)
 
 
@@ -2677,6 +2683,8 @@ State 149
 
    73 scanf_id_list: scanf_id_list . COMMA scanf_id_list
    73              | scanf_id_list COMMA scanf_id_list .
+
+    COMMA  shift, and go to state 136
 
     $default  reduce using rule 73 (scanf_id_list)
 

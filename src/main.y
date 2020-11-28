@@ -30,7 +30,7 @@
 %nonassoc IFX
 %nonassoc ELSE
 
-%left COMMA
+%right COMMA
 
 %right LOP_ASSIGN EQ_ASSIGN
 %left AND OR
