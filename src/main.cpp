@@ -6,6 +6,8 @@ extern FILE *yyin;  // yacc缺省输入
 extern int yyparse();//进行语法分析
 
 using namespace std;
+
+
 int main(int argc, char *argv[])
 {
     // 写入文件

@@ -517,6 +517,7 @@ char *yytext;
 #include "common.h"
 #include "main.tab.h"  // yacc header
 int lineno = 1;  // 行号
+
 /*void insert(const char*letter,char*lexeme,char* type);
 int lookup(const char*letter,char*lexeme);
 char* tp=new char[3];*/
@@ -653,8 +654,8 @@ void stack_sub()
     }
 }
 
-#line 657 "src/main.lex.yy.cpp"
 #line 658 "src/main.lex.yy.cpp"
+#line 659 "src/main.lex.yy.cpp"
 
 #define INITIAL 0
 
@@ -869,10 +870,10 @@ YY_DECL
 		}
 
 	{
-#line 167 "src/main.lex"
+#line 168 "src/main.lex"
 
 
-#line 876 "src/main.lex.yy.cpp"
+#line 877 "src/main.lex.yy.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -932,37 +933,37 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 169 "src/main.lex"
+#line 170 "src/main.lex"
 /* do nothing */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 170 "src/main.lex"
+#line 171 "src/main.lex"
 /* do nothing */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 173 "src/main.lex"
+#line 174 "src/main.lex"
 { lasttoken = yytext; return T_INT;};
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 174 "src/main.lex"
+#line 175 "src/main.lex"
 { lasttoken = yytext; return T_BOOL;};
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 175 "src/main.lex"
+#line 176 "src/main.lex"
 {lasttoken = yytext; return T_CHAR;};
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 176 "src/main.lex"
+#line 177 "src/main.lex"
 {lasttoken = yytext;return VOID;};
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 178 "src/main.lex"
+#line 179 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_DPLUS;
@@ -972,7 +973,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 184 "src/main.lex"
+#line 185 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_DMINUS;
@@ -982,7 +983,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 191 "src/main.lex"
+#line 192 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_P;
@@ -992,32 +993,32 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 197 "src/main.lex"
+#line 198 "src/main.lex"
 return RPAREN;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 199 "src/main.lex"
+#line 200 "src/main.lex"
 {lasttoken = " "; stack_add(); return LBRACE;};
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 200 "src/main.lex"
+#line 201 "src/main.lex"
 {stack_sub();return RBRACE;};
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 202 "src/main.lex"
+#line 203 "src/main.lex"
 return COMMA;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 203 "src/main.lex"
+#line 204 "src/main.lex"
 {lasttoken = " "; return SEMICOLON;};
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 204 "src/main.lex"
+#line 205 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_PLUS;
@@ -1027,7 +1028,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 210 "src/main.lex"
+#line 211 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_MINUS;
@@ -1037,7 +1038,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 216 "src/main.lex"
+#line 217 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_MULT;
@@ -1047,7 +1048,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 222 "src/main.lex"
+#line 223 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_DIV;
@@ -1057,7 +1058,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 228 "src/main.lex"
+#line 229 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_AND;
@@ -1067,7 +1068,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 234 "src/main.lex"
+#line 235 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_OR;
@@ -1077,7 +1078,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 240 "src/main.lex"
+#line 241 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_NOT;
@@ -1087,7 +1088,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 246 "src/main.lex"
+#line 247 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_POS;
@@ -1097,7 +1098,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 252 "src/main.lex"
+#line 253 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     node->optype = OP_MOD;
@@ -1107,7 +1108,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 260 "src/main.lex"
+#line 261 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_WHILE;
@@ -1117,7 +1118,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 267 "src/main.lex"
+#line 268 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     yylval = node;
@@ -1126,7 +1127,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 273 "src/main.lex"
+#line 274 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_FOR;
@@ -1136,7 +1137,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 280 "src/main.lex"
+#line 281 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_IF;
@@ -1146,7 +1147,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 287 "src/main.lex"
+#line 288 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_ELSE;
@@ -1156,7 +1157,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 294 "src/main.lex"
+#line 295 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_PRINTF;
@@ -1166,7 +1167,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 301 "src/main.lex"
+#line 302 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_SCANF;
@@ -1176,7 +1177,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 308 "src/main.lex"
+#line 309 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_ASSIGN;
@@ -1194,7 +1195,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 323 "src/main.lex"
+#line 324 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_STMT);
     node->stype = STMT_ASSIGN;
@@ -1205,7 +1206,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 331 "src/main.lex"
+#line 332 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_EXPR);
     yylval = node;
@@ -1226,7 +1227,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 349 "src/main.lex"
+#line 350 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_CONST);
     node->type = TYPE_INT;
@@ -1237,7 +1238,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 357 "src/main.lex"
+#line 358 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_CONST);
     node->type = TYPE_CHAR;
@@ -1248,27 +1249,29 @@ YY_RULE_SETUP
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 365 "src/main.lex"
+#line 366 "src/main.lex"
 {
-    int x=0;
+    int x;
     if(lasttoken==" ")
     {
         x = Insert_def_ID(yytext);
-        cout<<yytext<<":"<<x<<endl;
+        //cout<<yytext<<":"<<x<<endl;
     }
     else{
         x = Insert_undef_ID(yytext);
-        cout<<yytext<<":"<<x<<endl;
+        //cout<<yytext<<":"<<x<<endl;
     }
+    
     TreeNode* node = new TreeNode(lineno, NODE_VAR);
     node->var_name = string(yytext);
+    node->scope=x;
     yylval = node;
     return IDENTIFIER;
 }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 382 "src/main.lex"
+#line 385 "src/main.lex"
 {
     TreeNode* node = new TreeNode(lineno, NODE_CONST);
     node->type = TYPE_STRING;
@@ -1279,28 +1282,28 @@ YY_RULE_SETUP
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 390 "src/main.lex"
+#line 393 "src/main.lex"
 /* do nothing */
 	YY_BREAK
 case 39:
 /* rule 39 can match eol */
 YY_RULE_SETUP
-#line 392 "src/main.lex"
+#line 395 "src/main.lex"
 lineno++;
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 394 "src/main.lex"
+#line 397 "src/main.lex"
 {
     cerr << "[line "<< lineno <<" ] unknown character:" << yytext << endl;
 }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 397 "src/main.lex"
+#line 400 "src/main.lex"
 ECHO;
 	YY_BREAK
-#line 1304 "src/main.lex.yy.cpp"
+#line 1307 "src/main.lex.yy.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2268,7 +2271,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 397 "src/main.lex"
+#line 400 "src/main.lex"
 
 /*struct symbol1{
  char* letter;  //单词

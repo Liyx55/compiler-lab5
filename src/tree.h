@@ -68,6 +68,7 @@ enum StmtType {
 // 树结点
 struct TreeNode {
 public:
+
     int nodeID = -1;  // 用于作业的序号输出
     int lineno;  // 行号
     NodeType nodeType;  // 结点类型
@@ -106,7 +107,7 @@ public:
 
     string str_val;  // string值
     string var_name;  // 变量名字
-
+    int scope;
     void printConstValue();  // 如果是常量，就输出内容
     void printOP();  // 打印运算符
     string getOP();  // 获得运算符

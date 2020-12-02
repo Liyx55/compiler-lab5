@@ -1,5 +1,5 @@
 #include "tree.h"
-
+//#include "common.h"
 // 构造函数
 TreeNode::TreeNode(int lineno, NodeType type) {
     this->lineno = lineno;
@@ -58,9 +58,11 @@ void TreeNode::printNodeInfo() {
     // 如果是常量或类型，输出类型
     if(this->nodeType == NODE_CONST || this->nodeType == NODE_TYPE)
         cout << "type: " << this->type->getTypeInfo() << '\t';
-    // 如果是变量，输出变量名
-    else if(this->nodeType == NODE_VAR)
+    // 如果是变量，输出变量名和作用域!!!
+    else if(this->nodeType == NODE_VAR){
         cout << "varname: " << this->var_name << '\t';
+        cout << "scope: " << this->scope << '\t';
+    }
     else if(this->nodeType == NODE_OP)
         cout << "op: " << this->getOP() << '\t';
     this->printConstValue();

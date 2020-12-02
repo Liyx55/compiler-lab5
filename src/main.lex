@@ -3,6 +3,7 @@
 #include "common.h"
 #include "main.tab.h"  // yacc header
 int lineno = 1;  // 行号
+
 /*void insert(const char*letter,char*lexeme,char* type);
 int lookup(const char*letter,char*lexeme);
 char* tp=new char[3];*/
@@ -363,18 +364,20 @@ IDENTIFIER [[:alpha:]_][[:alpha:][:digit:]_]*
 }
 
 {IDENTIFIER} {
-    int x=0;
+    int x;
     if(lasttoken==" ")
     {
         x = Insert_def_ID(yytext);
-        cout<<yytext<<":"<<x<<endl;
+        //cout<<yytext<<":"<<x<<endl;
     }
     else{
         x = Insert_undef_ID(yytext);
-        cout<<yytext<<":"<<x<<endl;
+        //cout<<yytext<<":"<<x<<endl;
     }
+    
     TreeNode* node = new TreeNode(lineno, NODE_VAR);
     node->var_name = string(yytext);
+    node->scope=x;
     yylval = node;
     return IDENTIFIER;
 }
