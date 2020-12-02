@@ -25,22 +25,22 @@
 
 %token IDENTIFIER INTEGER CHAR BOOL STRING
 
-%token SEMICOLON
+%token SEMICOLON //分号
 
-%nonassoc IFX
-%nonassoc ELSE
+%nonassoc IFX//%nonassoc的含义是没有结合性。
+%nonassoc ELSE//它一般与%prec结合使用表示该操作有同样的优先级。
 
-%right COMMA
+%right COMMA//等号
 
 %right LOP_ASSIGN EQ_ASSIGN
-%left AND OR
+%left AND OR //运算符
 %left RELOP
 %left PLUS MINUS
 %left MOD
 %left MULT DIV
 
 %right NOT
-%right POS
+%right POS//按位与
 %right UDMINUS UDPLUS
 %right UMINUS
 %right POINTER
