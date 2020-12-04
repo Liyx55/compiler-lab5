@@ -2,8 +2,9 @@
 I'm level 1 test.
 */
 void main() {
-    int a, s;
+    int a = 1, s;
     a = 10;
+    //int a-=1;
     s = 0;
     char ch;
     scanf("%d", &ch);

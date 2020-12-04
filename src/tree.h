@@ -46,7 +46,7 @@ enum OperatorType
     OP_DPLUS,  // ++
     OP_DMINUS,  // --
     OP_MOD,  // %
-    OP_POS,  // &
+    OP_POS  // &
 };
 
 // 语句类型

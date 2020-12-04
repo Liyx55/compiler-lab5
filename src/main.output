@@ -1596,6 +1596,7 @@ State 94
     MINUS   shift, and go to state 63
     MULT    shift, and go to state 64
     DIV     shift, and go to state 65
+    AND     shift, and go to state 66
     DMINUS  shift, and go to state 68
     DPLUS   shift, and go to state 69
     RELOP   shift, and go to state 70

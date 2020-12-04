@@ -1,97 +1,99 @@
 lno@0	@0	program	children: [@1 ]	
 
-lno@2	@1	function	children: [@2 @3 @4 @8 @11 @14 @17 @20 ]	
+lno@2	@1	function	children: [@2 @3 @4 @10 @13 @16 @19 @22 ]	
 lno@2	@2	type	type: void	
 lno@2	@3	variable	varname: main	scope: 1	
 
-lno@3	@4	statement	children: [@5 @6 @7 ]	decl	
+lno@3	@4	statement	children: [@5 @6 @9 ]	decl	
 lno@3	@5	type	type: int	
-lno@3	@6	variable	varname: a	scope: 2	
-lno@3	@7	variable	varname: s	scope: 3	
+lno@3	@6	initiation	children: [@7 @8 ]	
+lno@3	@7	variable	varname: a	scope: 2	
+lno@3	@8	const	type: int	value: 1	
+lno@3	@9	variable	varname: s	scope: 3	
 
-lno@4	@8	statement	op: =	children: [@9 @10 ]	assign	
-lno@4	@9	variable	varname: a	scope: 2	
-lno@4	@10	const	type: int	value: 10	
+lno@4	@10	statement	op: =	children: [@11 @12 ]	assign	
+lno@4	@11	variable	varname: a	scope: 2	
+lno@4	@12	const	type: int	value: 10	
 
-lno@5	@11	statement	op: =	children: [@12 @13 ]	assign	
-lno@5	@12	variable	varname: s	scope: 3	
-lno@5	@13	const	type: int	value: 0	
+lno@6	@13	statement	op: =	children: [@14 @15 ]	assign	
+lno@6	@14	variable	varname: s	scope: 3	
+lno@6	@15	const	type: int	value: 0	
 
-lno@6	@14	statement	children: [@15 @16 ]	decl	
-lno@6	@15	type	type: char	
-lno@6	@16	variable	varname: ch	scope: 4	
+lno@7	@16	statement	children: [@17 @18 ]	decl	
+lno@7	@17	type	type: char	
+lno@7	@18	variable	varname: ch	scope: 4	
 
-lno@7	@17	statement	children: [@18 @19 ]	scanf	
-lno@7	@18	const	type: string	value:"%d"	
-lno@7	@19	variable	varname: ch	scope: 4	
+lno@8	@19	statement	children: [@20 @21 ]	scanf	
+lno@8	@20	const	type: string	value:"%d"	
+lno@8	@21	variable	varname: ch	scope: 4	
 
-lno@8	@20	statement	children: [@21 @39 @42 @45 @48 @51 ]	while	
-lno@8	@21	expression	op: &&	children: [@22 @35 ]	
-lno@8	@22	expression	op: ||	children: [@23 @30 ]	
-lno@8	@23	expression	op: &&	children: [@24 @27 ]	
-lno@8	@24	expression	op: >	children: [@25 @26 ]	
-lno@8	@25	variable	varname: a	scope: 2	
-lno@8	@26	const	type: int	value: 0	
-lno@8	@27	expression	op: <=	children: [@28 @29 ]	
-lno@8	@28	variable	varname: a	scope: 2	
-lno@8	@29	const	type: int	value: 10	
-lno@8	@30	expression	op: ==	children: [@31 @34 ]	
-lno@8	@31	expression	op: %	children: [@32 @33 ]	
-lno@8	@32	variable	varname: a	scope: 2	
-lno@8	@33	const	type: int	value: 100	
-lno@8	@34	const	type: int	value: 10	
-lno@8	@35	expression	op: ==	children: [@36 @38 ]	
-lno@8	@36	expression	op: !	children: [@37 ]	
-lno@8	@37	variable	varname: a	scope: 2	
-lno@8	@38	const	type: int	value: 10	
+lno@9	@22	statement	children: [@23 @41 @44 @47 @50 @53 ]	while	
+lno@9	@23	expression	op: ||	children: [@24 @31 ]	
+lno@9	@24	expression	op: &&	children: [@25 @28 ]	
+lno@9	@25	expression	op: >	children: [@26 @27 ]	
+lno@9	@26	variable	varname: a	scope: 2	
+lno@9	@27	const	type: int	value: 0	
+lno@9	@28	expression	op: <=	children: [@29 @30 ]	
+lno@9	@29	variable	varname: a	scope: 2	
+lno@9	@30	const	type: int	value: 10	
+lno@9	@31	expression	op: &&	children: [@32 @37 ]	
+lno@9	@32	expression	op: ==	children: [@33 @36 ]	
+lno@9	@33	expression	op: %	children: [@34 @35 ]	
+lno@9	@34	variable	varname: a	scope: 2	
+lno@9	@35	const	type: int	value: 100	
+lno@9	@36	const	type: int	value: 10	
+lno@9	@37	expression	op: ==	children: [@38 @40 ]	
+lno@9	@38	expression	op: !	children: [@39 ]	
+lno@9	@39	variable	varname: a	scope: 2	
+lno@9	@40	const	type: int	value: 10	
 
-lno@9	@39	statement	op: -=	children: [@40 @41 ]	assign	
-lno@9	@40	variable	varname: a	scope: 2	
-lno@9	@41	const	type: int	value: 1	
+lno@10	@41	statement	op: -=	children: [@42 @43 ]	assign	
+lno@10	@42	variable	varname: a	scope: 2	
+lno@10	@43	const	type: int	value: 1	
 
-lno@10	@42	statement	children: [@43 @44 ]	decl	
-lno@10	@43	type	type: int	
-lno@10	@44	variable	varname: a	scope: 5	
-
-lno@11	@45	statement	op: =	children: [@46 @47 ]	assign	
+lno@11	@44	statement	children: [@45 @46 ]	decl	
+lno@11	@45	type	type: int	
 lno@11	@46	variable	varname: a	scope: 5	
-lno@11	@47	const	type: int	value: 10	
 
-lno@12	@48	statement	op: +=	children: [@49 @50 ]	assign	
-lno@12	@49	variable	varname: s	scope: 3	
-lno@12	@50	variable	varname: a	scope: 5	
+lno@12	@47	statement	op: =	children: [@48 @49 ]	assign	
+lno@12	@48	variable	varname: a	scope: 5	
+lno@12	@49	const	type: int	value: 10	
 
-lno@13	@51	statement	children: [@52 @57 @60 @63 @66 ]	if	
-lno@13	@52	expression	op: <	children: [@53 @55 ]	
-lno@13	@53	expression	op: -	children: [@54 ]	
-lno@13	@54	variable	varname: s	scope: 3	
-lno@13	@55	expression	op: -	children: [@56 ]	
-lno@13	@56	const	type: int	value: 10	
+lno@13	@50	statement	op: +=	children: [@51 @52 ]	assign	
+lno@13	@51	variable	varname: s	scope: 3	
+lno@13	@52	variable	varname: a	scope: 5	
 
-lno@14	@57	statement	children: [@58 @59 ]	prinf	
-lno@14	@58	const	type: string	value:"result is: %d\n"	
-lno@14	@59	variable	varname: s	scope: 3	
+lno@14	@53	statement	children: [@54 @59 @62 @65 @68 ]	if	
+lno@14	@54	expression	op: <	children: [@55 @57 ]	
+lno@14	@55	expression	op: -	children: [@56 ]	
+lno@14	@56	variable	varname: s	scope: 3	
+lno@14	@57	expression	op: -	children: [@58 ]	
+lno@14	@58	const	type: int	value: 10	
 
-lno@15	@60	statement	children: [@61 @62 ]	decl	
-lno@15	@61	type	type: int	
-lno@15	@62	variable	varname: b	scope: 6	
+lno@15	@59	statement	children: [@60 @61 ]	prinf	
+lno@15	@60	const	type: string	value:"result is: %d\n"	
+lno@15	@61	variable	varname: s	scope: 3	
 
-lno@16	@63	statement	op: =	children: [@64 @65 ]	assign	
+lno@16	@62	statement	children: [@63 @64 ]	decl	
+lno@16	@63	type	type: int	
 lno@16	@64	variable	varname: b	scope: 6	
-lno@16	@65	const	type: int	value: 10	
 
-lno@17	@66	statement	children: [@67 @72 @75 @77 ]	for	
-lno@17	@67	statement	children: [@68 @69 ]	decl	
-lno@17	@68	type	type: int	
-lno@17	@69	initiation	children: [@70 @71 ]	
-lno@17	@70	variable	varname: i	scope: 7	
-lno@17	@71	const	type: int	value: 0	
-lno@17	@72	expression	op: <	children: [@73 @74 ]	
-lno@17	@73	variable	varname: i	scope: 7	
-lno@17	@74	variable	varname: b	scope: 6	
-lno@17	@75	variable	varname: i	scope: 7	children: [@76 ]	
-lno@17	@76	expression	op: ++	
+lno@17	@65	statement	op: =	children: [@66 @67 ]	assign	
+lno@17	@66	variable	varname: b	scope: 6	
+lno@17	@67	const	type: int	value: 10	
 
-lno@18	@77	statement	children: [@78 @79 ]	prinf	
-lno@18	@78	const	type: string	value:"Have fun: %d\n"	
-lno@18	@79	variable	varname: i	scope: 7	
+lno@18	@68	statement	children: [@69 @74 @77 @79 ]	for	
+lno@18	@69	statement	children: [@70 @71 ]	decl	
+lno@18	@70	type	type: int	
+lno@18	@71	initiation	children: [@72 @73 ]	
+lno@18	@72	variable	varname: i	scope: 7	
+lno@18	@73	const	type: int	value: 0	
+lno@18	@74	expression	op: <	children: [@75 @76 ]	
+lno@18	@75	variable	varname: i	scope: 7	
+lno@18	@76	variable	varname: b	scope: 6	
+lno@18	@77	variable	varname: i	scope: 7	children: [@78 ]	
+lno@18	@78	expression	op: ++	
+
+lno@19	@79	statement	children: [@80 @81 ]	prinf	
+lno@19	@80	const	type: string	value:"Have fun: %d\n"	
+lno@19	@81	variable	varname: i	scope: 7	

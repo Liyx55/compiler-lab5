@@ -4,9 +4,6 @@
 #include "main.tab.h"  // yacc header
 int lineno = 1;  // 行号
 
-/*void insert(const char*letter,char*lexeme,char* type);
-int lookup(const char*letter,char*lexeme);
-char* tp=new char[3];*/
 
 int id_count=0;
 string lasttoken;
@@ -398,49 +395,3 @@ IDENTIFIER [[:alpha:]_][[:alpha:][:digit:]_]*
     cerr << "[line "<< lineno <<" ] unknown character:" << yytext << endl;
 }
 %%
-/*struct symbol1{
- char* letter;  //单词
- char* lexeme;   //词素 
- char* type;   //类型
- int value;    //第几个这样的
- struct symbol1 *m_next;//下一个symtable的字符
-};
-struct symbol1* symtable;//symtable中的第一个元素
-int lookup(const char*letter,char*lexeme)
-{
- struct symbol1 *st=symtable;
- int count=-1;
- for(;st;st=st->m_next)
- {
-   if(strcmp(st->letter,letter)==0)   //有这个单词则计数++
-   {
-     count++;
-     if(strcmp(st->lexeme,lexeme)==0)
-     {
-       return -2;   //说明已在符号表中
-     }
-   } 
- }
- return count;
-}
-void insert(const char*letter,char*lexeme,char* type)
-{
-    struct symbol1 *st;
-    int count=lookup(letter,lexeme);
-    if(count==-2)//已在则返回
-    {
-      return ;
-    }
-    //不在
-    st=(struct symbol1*)malloc(sizeof(struct symbol1));
-    st->m_next=symtable;
-    st->letter=(char*)malloc(strlen(letter)+1);
-    strcpy(st->letter,letter);
-    st->lexeme=(char*)malloc(strlen(lexeme)+1);
-    strcpy(st->lexeme,lexeme);
-    st->value=count+1;
-    st->type=type;
-    cout<<"单词   "<<st->letter<<"\t\t"<<"词素   "<<st->lexeme<<"\t"<<"类型    "<<st->type<<"\t"<<"属性   "<<st->value<<endl;
-    cout<<"单词   "<<st->letter<<"\t\t"<<"词素   "<<st->lexeme<<"\t"<<"类型    "<<st->type<<"\t"<<"属性   "<<st->value<<endl;
-    symtable=st;   //symtable第一个变为st 
-}*/
